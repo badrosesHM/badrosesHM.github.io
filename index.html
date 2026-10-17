@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#170d10">
+<meta name="description" content="Bad Roses">
+<title>Bad Roses</title>
+<link rel="icon" href="assets/rose.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <a class="brand" href="#home" aria-label="Bad Roses home"><img src="assets/rose.svg" alt=""><span>Bad Roses<small>Horse Museum Community</small></span></a>
+  <nav class="main-nav" aria-label="Main navigation">
+    <a href="#home" data-route="home">Main page</a>
+    <a href="#database" data-route="database">Database</a>
+    <a href="#waitlist" data-route="waitlist">Waitlist</a>
+    <a href="#socials" data-route="socials">Socials</a>
+    <a href="#spirit" data-route="spirit">Spirit schedule</a>
+    <a href="#championship" data-route="championship">Championship schedule</a>
+  </nav>
+  <a class="header-join" href="#waitlist">Join the community <span aria-hidden="true">↗</span></a>
+</header>
+<main id="main">
+<!-- EDIT TEXT: Main page hero, welcome copy, database and schedule previews, and community call to action. -->
+<section class="view active" id="home" data-view="home">
+  <div class="hero">
+    <div class="hero-content wrap">
+      <p class="eyebrow"><span class="rose-mark">𓆩♡𓆪</span> A Horse Museum Community</p>
+      <h1>Bad Roses<br><em>Community</em></h1>
+      <p class="hero-copy">Welcome to Bad Roses — a Horse Museum Community with an in-game club and an open community Discord.</p>
+      <div class="hero-actions"><a class="button button-primary" href="#socials">Find our socials <span aria-hidden="true">↗</span></a><a class="button button-quiet" href="#database">Explore the database</a></div>
+
+    </div>
+    <div class="hero-bottom"><span>BAD ROSES</span><span>A HORSE MUSEUM COMMUNITY</span></div>
+  </div>
+  <div class="wrap home-intro">
+    <div class="section-heading"><p class="eyebrow">Welcome, Rose</p><h2>A little website<br><em>for the people who are interested.</em></h2></div>
+    <p class="intro-text">Bad Roses is a Horse Museum Community, with an in-game club and an open community Discord. Browse a lovingly organized database with 2018 items, or check the weekly Spirit and championship schedules with in-game time.</p>
+  </div>
+  <div class="wrap home-grid">
+    <a class="feature-card feature-database" href="#database"><span class="card-kicker">The database <span>01</span></span><h3>Browse through the database</h3><p>A browsable guide to clothing, gear, horse decorations, horses and pets in the 2018 database.</p><div class="item-preview" id="home-items" aria-label="A few entries from the database"></div><span class="text-link">Open the database <b>→</b></span></a>
+    <a class="feature-card feature-spirit" href="#spirit"><span class="card-kicker">On the map <span>02</span></span><h3>Find Spirit</h3><p>See Spirit’s weekly locations at a glance, with the location and timing notes close by.</p><div class="mini-schedule"><span>08:00</span><b>South Hoof Peninsula</b><i>MONDAY</i></div><div class="mini-schedule"><span>09:00</span><b>Sunfield Farm</b><i>MONDAY</i></div><span class="text-link">See the full schedule <b>→</b></span></a>
+    <a class="feature-card feature-community" href="#waitlist"><span class="card-kicker">Ride with us <span>03</span></span><h3>Meet the Roses</h3><p>Join the community Discord and follow the waitlist channel’s steps if you’d like to join the club in-game.</p><div class="rose-stamp"><img src="assets/rose.svg" alt=""><span>YOU BELONG<br>TO ROSES</span></div><span class="text-link">How to join <b>→</b></span></a>
+  </div>
+  <div class="wrap home-cta"><div><p class="eyebrow">A place for Horse Museum players</p><h2>Become part of the <em> Community</em></h2><p>Come say hello to the Bad Roses Community and find out what it is all about.</p></div><div class="cta-buttons"><a class="button button-discord" data-link="communityDiscord" href="#">Join our community Discord <span>↗</span></a></div></div>
+</section>
+<!-- EDIT TEXT: Database page introduction, search tips, archive notes, and attribution. Item and category data is in data/. -->
+<section class="view" id="database" data-view="database">
+  <div class="page-banner"><div class="wrap"><p class="eyebrow">The Bad Roses Database · 2018 version</p><h1>A field guide to <em>Jorvik.</em></h1><p>Find an item by name, where it came from, or what it can do. Browse all 4,900+ entries from the supplied historical database.</p><div class="archive-meta"><span>𓆩♡𓆪 5 collections</span><span></div></div></div>
+  <div class="wrap database-wrap">
+    <div class="search-panel"><label for="db-search">Find something in the archive</label><div class="search-box"><span aria-hidden="true">⌕</span><input id="db-search" type="search" placeholder="Search names, descriptions, shops, stats…" autocomplete="off"><kbd> / </kbd></div><p>Tip: try “Moorland”, “flower” or “speed 3”.</p></div>
+    <div class="db-layout">
+      <aside class="db-sidebar"><h2>Collections</h2><div class="category-list" id="category-list"></div><div class="filter-group"><label for="section-filter">Refine category</label><select id="section-filter"><option value="">All sections</option></select></div><div class="filter-group"><label for="sort-filter">Sort entries</label><select id="sort-filter"><option value="az">Name A–Z</option><option value="za">Name Z–A</option><option value="category">Category</option></select></div><div class="archive-aside"><span class="rose-mark">𓆩♡𓆪</span><p>meow</p></div></aside>
+      <div class="db-results"><div class="results-head"><p id="result-count" aria-live="polite">Loading the archive…</p><button class="text-button" id="clear-filters" type="button">Clear filters</button></div><div class="item-grid" id="item-grid"></div><button class="button button-outline load-more" id="load-more" type="button">Show more entries <span aria-hidden="true">↓</span></button><div class="empty-state" id="empty-state" hidden><img src="assets/rose.svg" alt=""><h3>No matches found</h3><p>Try another search or clear your filters.</p></div></div>
+    </div>
+  </div>
+</section>
+<!-- EDIT TEXT: Waitlist instructions and community Discord call to action. -->
+<section class="view" id="waitlist" data-view="waitlist">
+  <div class="page-banner waitlist-banner"><div class="wrap"><p class="eyebrow">A place at the table</p><h1>Every Rose starts<br><em>somewhere.</em></h1><p>We keep a waitlist for our in-game club. Everyone is welcome to join it.</p></div></div>
+  <div class="wrap waitlist-content"><div class="waitlist-steps"><p class="eyebrow">Three easy steps</p><h2>Your path to<br><em>Bad Roses.</em></h2><ol><li><span>01</span><div><h3>Join the community Discord</h3><p>Our community server is the front door. Come say hello and get settled in.</p></div></li><li><span>02</span><div><h3>Open the waitlist channel</h3><p>Head to the club waitlist channel in the community server.</p></div></li><li><span>03</span><div><h3>Follow the pinned instructions</h3><p>Everything you need to join the list is explained there. Anyone can put their name down.</p></div></li></ol><a class="button button-discord button-large" data-link="communityDiscord" href="#"><span class="discord-logo" aria-hidden="true"></span> Join the community Discord <span class="button-arrow">↗</span></a><p class="small-note">Joining the waitlist is not the same as joining the in-game club. Club openings are handled through the waitlist channel.</p></div><aside class="waitlist-aside"><div class="rose-art"><img src="assets/rose.svg" alt="A red rose"><span>GROW<br>TOGETHER</span></div><h3>Already a Rose?</h3><p>Club members also have a club Discord. Its details are not shared on this page.</p></aside></div>
+</section>
+<!-- EDIT TEXT: Social links and profile descriptions. Update URLs in site-config.js. -->
+<section class="view" id="socials" data-view="socials">
+  <div class="page-banner socials-banner"><div class="wrap"><p class="eyebrow">Find Bad Roses online</p><h1>Follow the <em>petals.</em></h1><p>Join the conversation, meet the club, and see what’s happening around Jorvik.</p></div></div>
+  <div class="wrap socials-wrap"><article class="social-card discord-card"><div class="social-icon"><svg viewBox="0 0 24 24" aria-label="Discord logo" role="img"><path fill="currentColor" d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.419-2.1568 2.419Z"/></svg></div><p class="eyebrow">Come say hello</p><h2>Community<br><em>Discord.</em></h2><p>Our open community server is where the waitlist lives and where everyone can meet the Roses.</p><a class="button button-discord" data-link="communityDiscord" href="#">Join the community <span>↗</span></a><span class="social-caption">OPEN TO EVERYONE</span></article><article class="social-card tiktok-card"><div class="social-icon"><svg viewBox="0 0 24 24" aria-label="TikTok logo" role="img"><path fill="currentColor" d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></div><p class="eyebrow">Life around Jorvik</p><h2>Bad Roses<br><em>on TikTok.</em></h2><p>Find our short videos and little snapshots from club life.</p><a class="button button-tiktok" data-link="tiktok" href="#">Follow on TikTok <span>↗</span></a><span class="social-caption">CLIPS FROM JORVIK</span></article></div><p class="wrap social-footnote">Official social platforms are run by their respective companies. External links open their websites or apps.</p>
+</section>
+<!-- EDIT TEXT: Spirit schedule notes and location explanations. The schedule table data is in app.js. -->
+<section class="view" id="spirit" data-view="spirit">
+  <div class="page-banner spirit-banner"><div class="wrap"><p class="eyebrow">Everything you need to know about Spirit</p><h1>Where is <em>Spirit?</em></h1><p>Use the weekly route below to find Spirit in Jorvik. Times in the table are UTC.</p></div></div>
+  <div class="wrap spirit-layout"><div class="schedule-panel"><div class="schedule-top"><div><p class="eyebrow">Weekly route</p><h2>Spirit’s schedule</h2></div><div class="time-badge">UTC TIME</div></div><p class="table-hint">Swipe or scroll sideways to see each day.</p><div class="table-scroll"><table class="schedule-table" id="spirit-table"><caption>Spirit’s locations by day and UTC time</caption></table></div></div><aside class="schedule-notes"><p class="eyebrow">Reading the route</p><h2>Find the right<br><em>corner of Jorvik.</em></h2><div class="key-list"><div><b>SH</b><p>Lighthouse, middle, or close Epona</p></div><div><b>FG</b><p>Close to the excavator hill or the red cottage in Forgotten Fields</p></div><div><b>EF</b><p>Close North Link or Hollow Woods</p></div><div><b>QF</b><p>Both sides of Barney; near the tractor, or close to the big sign</p></div><div><b>FF</b><p>By the riding hall, or near the big tree</p></div><div><b>FP</b><p>Beach close to Doyle’s Abbey, around the big hill</p></div><div><b>ML</b><p>Between Conrad and the championship, or the beach</p></div><div><b>GHV</b><p>Close Pi, behind the northern gate, or near the wolves</p></div><div><b>HW</b><p>Abandoned summer house or close Valedale Village</p></div></div><div class="schedule-extra"><h3>A few things to know</h3><p>Spirit follows a weekly schedule and appears at different places depending on the day.</p><p>Times in this table are UTC (Coordinated Universal Time). Check or convert a time with <a href="https://www.utctime.net/" target="_blank" rel="noreferrer">UTC Time Converter ↗</a>.</p><p>Spirit disappears at 21:00 UTC and returns the next morning.</p></div></aside></div>
+</section>
+<!-- EDIT TEXT: Championship schedule introduction and schedule notes. The weekly table data is in app.js. -->
+<section class="view" id="championship" data-view="championship">
+  <div class="page-banner championship-banner"><div class="wrap"><p class="eyebrow">Plan your next championship!</p><h1>Championships<br><em>around the clock.</em></h1><p>Championship locations by day and hour.</p><span class="source-link">Weekly rotation · 06:00–23:00 UTC</span></div></div>
+  <div class="wrap championship-content"><div class="schedule-top"><div><p class="eyebrow">Weekly rotation</p><h2>Championship Schedule</h2></div><div class="time-badge">UTC TIME</div></div><p class="table-hint">Swipe or scroll sideways to see every day. Times in this table are UTC.</p><div class="table-scroll"><table class="schedule-table championship-table" id="champ-table"><caption>Championship locations by hour and day</caption></table></div><div class="champ-note"><span class="rose-mark">𓆩♡𓆪</span><p>This schedule is available across all the versions 2014, 2016, 2018 and 2020.</p></div></div>
+</section>
+<!-- EDIT TEXT: Privacy, external links, cookies, and game affiliation note. Review if site features change. -->
+<section class="view" id="privacy" data-view="privacy"><div class="page-banner"><div class="wrap"><p class="eyebrow">A small privacy note</p><h1>Clear skies,<br><em>clear choices.</em></h1><p>This fan site is a static information page. It has no accounts, forms, analytics, or advertising.</p></div></div><div class="wrap legal-copy"><h2>What this site does</h2><p>The site does not ask for or store personal information. It does not use analytics, advertising pixels, or a cookie banner. The database and schedule content are static files hosted with the site.</p><h2>External links and images</h2><p>Item photos are requested from image hosts linked in the supplied 2018 database. Following Discord, TikTok, or source links takes you to services with their own privacy policies. Those services may receive your IP address and browser request details. This site does not control their data practices.</p><h2>Cookies</h2><p>This site does not set cookies or use storage for tracking. If a future version adds analytics, forms, embedded social content, or other tracking technologies, this notice will need to be reviewed before adding them.</p><h2>A note on the game</h2><p>Bad Roses is an unofficial, non-commercial fan community. Star Stable, Star Stable Online, and related game content belong to their respective owners. This site is not affiliated with or endorsed by Star Stable Entertainment AB. Star Stable’s <a href="https://help.starstable.com/hc/en-us/articles/4404692524946-Your-License-to-use-the-game-service" target="_blank" rel="noreferrer">game-service license</a> describes restrictions on commercial use of game content; review it before adding monetization.</p><h2>Terms</h2><p>This version is an informational fan site with no accounts, payments, submissions, or other user transactions, so it does not include separate terms of service. Revisit this if the site later adds interactive services or monetization.</p><p class="small-note">This is general information about the features currently included on this site, not legal advice.</p></div></section>
+</main>
+<footer class="site-footer"><div class="wrap footer-top"><a class="brand footer-brand" href="#home"><img src="assets/rose.svg" alt=""><span>Bad Roses<small>Grow together on Jorvik</small></span></a><p><br></p><nav aria-label="Footer navigation"><a href="#socials">Socials</a><a href="#waitlist">Join the waitlist</a><a href="#privacy">Privacy</a></nav></div><div class="wrap footer-bottom"><span>© <span id="year"></span> Bad Roses · Community site</span><span><b></b></span></div></footer>
+<script src="site-config.js"></script>
+<script src="app.js" defer></script>
+</body>
+</html>
