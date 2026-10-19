@@ -8,6 +8,9 @@
 <title>Bad Roses</title>
 <link rel="icon" href="assets/rose.svg" type="image/svg+xml">
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="map.css">
+<link rel="stylesheet" href="schedule-menu.css">
+<link rel="stylesheet" href="reputation.css">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -18,8 +21,16 @@
     <a href="#database" data-route="database">Database</a>
     <a href="#waitlist" data-route="waitlist">Waitlist</a>
     <a href="#socials" data-route="socials">Socials</a>
-    <a href="#spirit" data-route="spirit">Spirit schedule</a>
-    <a href="#championship" data-route="championship">Championship schedule</a>
+    <a href="#map" data-route="map">Map</a>
+    <a href="#reputation" data-route="reputation">Reputation</a>
+    <!-- EDIT TEXT: Schedule dropdown labels and destinations. -->
+    <div class="schedule-dropdown">
+      <button class="schedule-menu-button" id="schedule-menu-button" type="button" aria-expanded="false" aria-controls="schedule-menu">Schedules</button>
+      <div class="schedule-menu" id="schedule-menu" hidden>
+        <a href="#spirit" data-route="spirit">Spirit schedule</a>
+        <a href="#championship" data-route="championship">Championship schedule</a>
+      </div>
+    </div>
   </nav>
   <a class="header-join" href="#waitlist">Join the community <span aria-hidden="true">↗</span></a>
 </header>
@@ -38,10 +49,10 @@
   </div>
   <div class="wrap home-intro">
     <div class="section-heading"><p class="eyebrow">Welcome, Rose</p><h2>A little website<br><em>for the people who are interested.</em></h2></div>
-    <p class="intro-text">Bad Roses is a Horse Museum Community, with an in-game club and an open community Discord. Browse a lovingly organized database with 2018 items, or check the weekly Spirit and championship schedules with in-game time.</p>
+    <p class="intro-text">Bad Roses is a Horse Museum Community, with an in-game club and an open community Discord. Browse the item and beauty database, follow the historical reputation guide, or check the weekly Spirit and championship schedules in UTC.</p>
   </div>
   <div class="wrap home-grid">
-    <a class="feature-card feature-database" href="#database"><span class="card-kicker">The database <span>01</span></span><h3>Browse through the database</h3><p>A browsable guide to clothing, gear, horse decorations, horses and pets in the 2018 database.</p><div class="item-preview" id="home-items" aria-label="A few entries from the database"></div><span class="text-link">Open the database <b>→</b></span></a>
+    <a class="feature-card feature-database" href="#database"><span class="card-kicker">The database <span>01</span></span><h3>Browse through the database</h3><p>A browsable guide to clothing, gear, horse decorations, horses, pets, makeup and hairstyles.</p><div class="item-preview" id="home-items" aria-label="A few entries from the database"></div><span class="text-link">Open the database <b>→</b></span></a>
     <a class="feature-card feature-spirit" href="#spirit"><span class="card-kicker">On the map <span>02</span></span><h3>Find Spirit</h3><p>See Spirit’s weekly locations at a glance, with the location and timing notes close by.</p><div class="mini-schedule"><span>08:00</span><b>South Hoof Peninsula</b><i>MONDAY</i></div><div class="mini-schedule"><span>09:00</span><b>Sunfield Farm</b><i>MONDAY</i></div><span class="text-link">See the full schedule <b>→</b></span></a>
     <a class="feature-card feature-community" href="#waitlist"><span class="card-kicker">Ride with us <span>03</span></span><h3>Meet the Roses</h3><p>Join the community Discord and follow the waitlist channel’s steps if you’d like to join the club in-game.</p><div class="rose-stamp"><img src="assets/rose.svg" alt=""><span>YOU BELONG<br>TO ROSES</span></div><span class="text-link">How to join <b>→</b></span></a>
   </div>
@@ -49,13 +60,15 @@
 </section>
 <!-- EDIT TEXT: Database page introduction, search tips, archive notes, and attribution. Item and category data is in data/. -->
 <section class="view" id="database" data-view="database">
-  <div class="page-banner"><div class="wrap"><p class="eyebrow">The Bad Roses Database · 2018 version</p><h1>A field guide to <em>Jorvik.</em></h1><p>Find an item by name, where it came from, or what it can do. Browse all 4,900+ entries from the supplied historical database.</p><div class="archive-meta"><span>𓆩♡𓆪 5 collections</span><span></div></div></div>
+  <div class="page-banner"><div class="wrap"><p class="eyebrow">The Bad Roses Database</p><h1>A field guide to <em>Jorvik.</em></h1><p>Find an item by name, where it came from, or what it can do. Browse more than 5,500 items, horses, pets, makeup looks and hairstyles.</p><div class="archive-meta"><span>6 collections</span></div></div></div>
   <div class="wrap database-wrap">
     <div class="search-panel"><label for="db-search">Find something in the archive</label><div class="search-box"><span aria-hidden="true">⌕</span><input id="db-search" type="search" placeholder="Search names, descriptions, shops, stats…" autocomplete="off"><kbd> / </kbd></div><p>Tip: try “Moorland”, “flower” or “speed 3”.</p></div>
     <div class="db-layout">
-      <aside class="db-sidebar"><h2>Collections</h2><div class="category-list" id="category-list"></div><div class="filter-group"><label for="section-filter">Refine category</label><select id="section-filter"><option value="">All sections</option></select></div><div class="filter-group"><label for="sort-filter">Sort entries</label><select id="sort-filter"><option value="az">Name A–Z</option><option value="za">Name Z–A</option><option value="category">Category</option></select></div><div class="archive-aside"><span class="rose-mark">𓆩♡𓆪</span><p>meow</p></div></aside>
+      <aside class="db-sidebar"><h2>Collections</h2><div class="category-list" id="category-list"></div><div class="filter-group"><label for="section-filter">Refine category</label><select id="section-filter"><option value="">All sections</option></select></div><div class="filter-group"><label for="sort-filter">Sort entries</label><select id="sort-filter"><option value="az">Name A–Z</option><option value="za">Name Z–A</option><option value="category">Category</option></select></div></aside>
       <div class="db-results"><div class="results-head"><p id="result-count" aria-live="polite">Loading the archive…</p><button class="text-button" id="clear-filters" type="button">Clear filters</button></div><div class="item-grid" id="item-grid"></div><button class="button button-outline load-more" id="load-more" type="button">Show more entries <span aria-hidden="true">↓</span></button><div class="empty-state" id="empty-state" hidden><img src="assets/rose.svg" alt=""><h3>No matches found</h3><p>Try another search or clear your filters.</p></div></div>
     </div>
+    <!-- EDIT TEXT: Database source attribution. -->
+    <div class="archive-credit"><span>Beauty collection source</span><p>Makeup and hairstyle records and images come from Starstable Database by Abbie Starwatcher. Pictures originate from Star Stable Online.</p><a href="https://ssodb.bplaced.net/db/en/makeup.html" target="_blank" rel="noreferrer">Makeup source</a> · <a href="https://ssodb.bplaced.net/db/en/hairstyles.html" target="_blank" rel="noreferrer">Hairstyles source</a></div>
   </div>
 </section>
 <!-- EDIT TEXT: Waitlist instructions and community Discord call to action. -->
@@ -67,6 +80,147 @@
 <section class="view" id="socials" data-view="socials">
   <div class="page-banner socials-banner"><div class="wrap"><p class="eyebrow">Find Bad Roses online</p><h1>Follow the <em>petals.</em></h1><p>Join the conversation, meet the club, and see what’s happening around Jorvik.</p></div></div>
   <div class="wrap socials-wrap"><article class="social-card discord-card"><div class="social-icon"><svg viewBox="0 0 24 24" aria-label="Discord logo" role="img"><path fill="currentColor" d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.419-2.1568 2.419Z"/></svg></div><p class="eyebrow">Come say hello</p><h2>Community<br><em>Discord.</em></h2><p>Our open community server is where the waitlist lives and where everyone can meet the Roses.</p><a class="button button-discord" data-link="communityDiscord" href="#">Join the community <span>↗</span></a><span class="social-caption">OPEN TO EVERYONE</span></article><article class="social-card tiktok-card"><div class="social-icon"><svg viewBox="0 0 24 24" aria-label="TikTok logo" role="img"><path fill="currentColor" d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></div><p class="eyebrow">Life around Jorvik</p><h2>Bad Roses<br><em>on TikTok.</em></h2><p>Find our short videos and little snapshots from club life.</p><a class="button button-tiktok" data-link="tiktok" href="#">Follow on TikTok <span>↗</span></a><span class="social-caption">CLIPS FROM JORVIK</span></article></div><p class="wrap social-footnote">Official social platforms are run by their respective companies. External links open their websites or apps.</p>
+</section>
+<!-- EDIT TEXT: Reputation guide introduction, Kallters progression, and Epona requirements. -->
+<section class="view" id="reputation" data-view="reputation">
+  <div class="page-banner reputation-banner">
+    <div class="wrap">
+      <p class="eyebrow">Historical progression guide · 2016–2020</p>
+      <h1>Build your<br><em>reputation.</em></h1>
+      <p>Follow the older quest and reputation requirements for unlocking the Kallters and reaching Epona.</p>
+    </div>
+  </div>
+  <div class="wrap reputation-page">
+    <!-- EDIT TEXT: Kallters guide. The matching image is assets/kallters-reputation.png. -->
+    <article class="reputation-guide" id="kallters-guide">
+      <div class="reputation-image-column">
+        <figure class="reputation-figure">
+          <img src="assets/kallters-reputation.png" alt="Nanook and Sedna of the Kallters standing in Dino Valley" loading="lazy" decoding="async">
+          <figcaption>Nanook and Sedna · The Kallters’ outer expedition</figcaption>
+        </figure>
+        <div class="reputation-summary">
+          <span>Unlock level</span><strong>Level 15</strong>
+          <span>Reputation path</span><strong>Neutral to Popular</strong>
+          <span>Region</span><strong>Dino Valley</strong>
+        </div>
+      </div>
+      <div class="reputation-copy">
+        <div class="reputation-heading"><span>01</span><div><p class="eyebrow">2016–2018</p><h2>Unlocking the Kallters</h2></div></div>
+        <p class="reputation-lead">To find and unlock the Kallters, complete a multi-day progression path in the Valley of the Hidden Dinosaur.</p>
+        <section class="reputation-block">
+          <h3>The progression path</h3>
+          <ol class="reputation-steps">
+            <li><strong>Enter Dino Valley.</strong><span>Reach at least Level 15 and complete the questline where you help Nic Stoneground repair his crashed hot air balloon. This opens the Valley of the Hidden Dinosaur.</span></li>
+            <li><strong>Help Nic Stoneground.</strong><span>Complete several days of exploration and setup quests for Nic Stoneground and Professor Einstein.</span></li>
+            <li><strong>Discover the Icengate.</strong><span>After roughly three days of consistent questing in the valley, a quest leads you up the Hidden Road to the massive frozen Icengate.</span></li>
+            <li><strong>Meet the outer expedition.</strong><span>Outside the gate, you finally meet Nanook and Sedna, the representatives of the Kallters’ outer expedition.</span></li>
+          </ol>
+        </section>
+        <section class="reputation-block reputation-grind">
+          <h3>The reputation grind</h3>
+          <p>Once unlocked, the Kallters work primarily as a reputation faction. Build their trust from <strong>Neutral</strong> to <strong>Popular</strong> to access their exclusive items and Generation 1 Fjord horses.</p>
+          <div class="reputation-detail-grid">
+            <div><h4>The dailies</h4><p>Gather unique valley resources such as call stones, ice, thistles, ice berries, ice chestnuts, and snow weasels.</p></div>
+            <div><h4>The reward</h4><p>Reach the required reputation tier to purchase the Generation 1 Fjord horses sold outside the Icengate.</p></div>
+          </div>
+        </section>
+      </div>
+    </article>
+
+    <!-- EDIT TEXT: Epona guide. The matching image is assets/epona-reputation.png. -->
+    <article class="reputation-guide reputation-guide-reversed" id="epona-guide">
+      <div class="reputation-image-column">
+        <figure class="reputation-figure">
+          <img src="assets/epona-reputation.png" alt="The gated path leading toward Epona" loading="lazy" decoding="async">
+          <figcaption>The secret route through the Graydew Mountains</figcaption>
+        </figure>
+        <div class="reputation-summary">
+          <span>Minimum level</span><strong>Level 14</strong>
+          <span>Required standing</span><strong>Friendly</strong>
+          <span>Destination</span><strong>Epona</strong>
+        </div>
+      </div>
+      <div class="reputation-copy">
+        <div class="reputation-heading"><span>02</span><div><p class="eyebrow">2016–2020</p><h2>Unlocking Epona</h2></div></div>
+        <p class="reputation-lead">Meet all of the following conditions to trigger Herman’s final text message and begin the Epona entrance questline.</p>
+        <section class="reputation-block">
+          <h3>Level requirement</h3>
+          <p>You must be at least <strong>Level 14</strong>. Because of the reputation work involved, many players naturally reach Level 16 before unlocking Epona.</p>
+        </section>
+        <section class="reputation-block">
+          <h3>Friendly reputation required</h3>
+          <ul class="reputation-list reputation-list-compact">
+            <li>GED Jarlaheim Office with Ms. Drake</li>
+            <li>Jorvik Stables</li>
+            <li>The Goldspur Family</li>
+            <li>The Jarlasson Family</li>
+          </ul>
+        </section>
+        <section class="reputation-block">
+          <h3>Key prerequisite questlines</h3>
+          <ul class="reputation-list">
+            <li><strong>The Harvest Counties Bridge</strong><span>Rebuild the bridge connecting Moorland to the Harvest Counties.</span></li>
+            <li><strong>The Jarlaheim Mayor storyline</strong><span>Help Jack Goldspur resolve Jarlaheim’s mayoral problems.</span></li>
+            <li><strong>The German Spies and Gretchen</strong><span>Find Gretchen around Fort Pinta and Hollow Woods, then help solve her family’s problems.</span></li>
+            <li><strong>The Summerhouse Scam</strong><span>Complete the Newcomer questline and help Helga’s family deal with Mr. Kembell’s summerhouse scam.</span></li>
+            <li><strong>Dino Valley exploration</strong><span>Talk to Nic Stoneground and help establish his camp in the Valley of the Hidden Dinosaur.</span></li>
+            <li><strong>Ms. Drake’s reports</strong><span>Complete her daily GED work in Jarlaheim through “A Step Up in Your Career?”, where you deliver her report to Herman.</span></li>
+          </ul>
+        </section>
+        <section class="reputation-block reputation-finale">
+          <h3>Unlocking the secret path</h3>
+          <ol class="reputation-steps">
+            <li><strong>The message.</strong><span>Herman sends an urgent text asking you to meet him at Jorvik Stables.</span></li>
+            <li><strong>Operation Grim Harvest.</strong><span>Herman reveals GED’s dangerous expansion plans and asks you to sneak past them.</span></li>
+            <li><strong>The compass and the gates.</strong><span>Help the Goldspur family secure a special compass that reveals the hidden trail.</span></li>
+            <li><strong>Graydew Mountains.</strong><span>Travel through the secret, trap-filled mountain path and emerge on the other side in Epona.</span></li>
+          </ol>
+        </section>
+      </div>
+    </article>
+  </div>
+</section>
+<!-- EDIT TEXT: Interactive star map introduction, controls, empty state, and selected-star labels. Star coordinates and descriptions are in data/star_locations.txt. -->
+<section class="view" id="map" data-view="map">
+  <div class="page-banner map-banner">
+    <div class="wrap">
+      <p class="eyebrow">Explore Jorvik</p>
+      <h1>Find every<br><em>hidden star.</em></h1>
+      <p>Search the locations, choose an area, then zoom and drag across the map to plan your route.</p>
+    </div>
+  </div>
+  <div class="wrap map-page">
+    <aside class="map-sidebar" aria-label="Star map controls">
+      <div class="map-sidebar-heading">
+        <div><p class="eyebrow">Collectible guide</p><h2>Star locations</h2></div>
+        <span class="map-count" id="map-count" aria-live="polite">Loading…</span>
+      </div>
+      <label class="map-field" for="star-search"><span>Search stars</span><input id="star-search" type="search" placeholder="Area, coordinates, clue…" autocomplete="off"></label>
+      <label class="map-field" for="star-region"><span>Area</span><select id="star-region"><option value="">All areas</option></select></label>
+      <div class="map-actions" aria-label="Map zoom controls">
+        <button type="button" id="map-zoom-out" aria-label="Zoom out">−</button>
+        <button type="button" id="map-reset">Reset map</button>
+        <button type="button" id="map-zoom-in" aria-label="Zoom in">+</button>
+      </div>
+      <div class="map-selected" id="map-selected">
+        <p class="eyebrow">Select a star</p>
+        <h3>Choose a marker</h3>
+        <p>Click a yellow star to see its exact coordinates and location clue.</p>
+      </div>
+      <p class="map-city-note">Jorvik City interiors use separate local maps, so their stars are listed in the source file but are not placed on this world map.</p>
+    </aside>
+    <div class="map-viewer-wrap">
+      <div class="map-toolbar"><span><b>Scroll</b> to zoom</span><span><b>Click and drag</b> to move</span><span><b>Click a star</b> for details</span></div>
+      <div class="map-viewer" id="map-viewer" tabindex="0" aria-label="Interactive map of Jorvik star locations">
+        <div class="map-stage" id="map-stage">
+          <img class="jorvik-map-image" src="assets/jorvik-map.png" alt="Map of Jorvik">
+          <div class="map-markers" id="map-markers"></div>
+        </div>
+        <div class="map-tooltip" id="map-tooltip" role="tooltip" hidden><strong id="map-tooltip-area"></strong><span id="map-tooltip-coordinates"></span><p id="map-tooltip-clue"></p></div>
+        <div class="map-loading" id="map-loading">Preparing the star map…</div>
+      </div>
+    </div>
+  </div>
 </section>
 <!-- EDIT TEXT: Spirit schedule notes and location explanations. The schedule table data is in app.js. -->
 <section class="view" id="spirit" data-view="spirit">
@@ -84,5 +238,8 @@
 <footer class="site-footer"><div class="wrap footer-top"><a class="brand footer-brand" href="#home"><img src="assets/rose.svg" alt=""><span>Bad Roses<small>Grow together on Jorvik</small></span></a><p><br></p><nav aria-label="Footer navigation"><a href="#socials">Socials</a><a href="#waitlist">Join the waitlist</a><a href="#privacy">Privacy</a></nav></div><div class="wrap footer-bottom"><span>© <span id="year"></span> Bad Roses · Community site</span><span><b></b></span></div></footer>
 <script src="site-config.js"></script>
 <script src="app.js" defer></script>
+<script src="beauty-category.js" defer></script>
+<script src="map.js" defer></script>
+<script src="schedule-menu.js" defer></script>
 </body>
 </html>

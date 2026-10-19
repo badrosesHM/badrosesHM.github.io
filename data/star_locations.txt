@@ -1,0 +1,230 @@
+꒰   ১    Star Locations  ໒   ꒱
+Aideen's Plaza
+
+X: 7, Y: 3    Stand directly in front of Konrad (the man sitting on the fountain ledge), and head to the pair of horses, behind the well, to the right. Click on the horse on the right with The Star symbol on it. A star will appear from the well.
+See Notes    Head to X: 6, Y: 1 and grab a cupcake out of the display. Then head to X: 11, Y: 7 and click on the fox in the green trash can, he will dig out a star, grab it, and run off. Chase the fox until you have figured out his running pattern. Then head to the spot he will run to next and place the cupcake there. The Fox will drop the star and run to the cupcake. Once the Fox has dropped it you can collect it.
+
+Cliffside County
+
+X: 107, Y: 177    At a drop behind the arena overlooking the forgotten fields
+X: 112, Y: 186    On the Riding Arena roof
+X: 129, Y: 189    Go to X: 126, Y: 194, face east and go past the fence. Then ride to your left along the cliff, the star is over the rock and next to a tree.
+X: 107, Y: 195    Next to a campfire, behind a birch tree.
+X: 130, Y: 205    Go to X: 132, Y: 203. there is a safe drop to the star.
+X: 108, Y: 198    Go to X: 115, Y: 200 and face south. Go down the hill and go right. There will be a sand path below the water that your horse can walk on. Follow to the star.
+
+Crescent Moon Village
+X: 89, Y: 323 Underneath the fishing dock.
+X: 88, Y: 331    In bushes by building near windmill and market stall.
+X: 94, Y: 332 In the bushes between the houses next to Camilla Turnstone.
+
+Dundull
+X: 371, Y: 365    Under a dock.
+X: 394, Y: 343    Next to a tree, near the bus stop.
+X: 388, Y: 346    In the corn field next to the village.
+X: 381, Y: 356    Behind a house on the main square.
+X: 393, Y: 365    Behind a tree on the hill surrounding the village.
+The Everwind Fields
+
+X: 200, Y: 121    In a hole by the bottom of the mountain south of Observatory.
+X: 166, Y: 119    Behind the Ski Lift. The star will be in a clump of bushes.
+X: 149, Y: 129    Behind a white house at The Baroness' Racetrack.
+X: 197, Y: 149    In between a clump of boulders.
+X: 175, Y: 144    In the Everwind Dumping Site. Inside a big U shaped boulder.
+
+
+Firgrove
+
+X: 312, Y: 246    In a hole filled with trees and bushes to the left of Birk's Passage.
+X: 341, Y: 240    In some bushes near a mountain at the right side of the spies' summer house - approach via right side of bear's cave.
+X: 300, Y: 215    In the bushes next to one of the buildings in Silverglade Mine.
+X: 323, Y: 194    In the bushes under the wooden bridge, near the start of the Firgrove racetrack.
+5 X: 350, Y: 185 Between two trees on ledge with white fence overlooking Firgrove Village. Turn left at the end of the bridge (x:339, Y:199) and go up the mountain.
+6 X: 353, Y: 175 Tree behind house in Firgrove Village.
+X:312, Y:162    Behind the Mountaineer's Hut up on the hidden mountain path. Take path beneath fallen tree bridge and to the right. go to the firgrove passage and veer off at the first fence break walk the grassy path climb off your horse and go on foot.
+
+The Forgotten Fields
+
+X: 121, Y: 217     This star requires four people to get. There will be a clearing with four stones with star patterns on them. Each person must stand on one stone and you will get an anim before a star will appear on the stone in the middle.
+X: 114, Y: 226    Found atop Pumpkin Cliff
+Head to X: 113, Y: 223 and face east, you will see a small path in between a pine tree and a rock face, follow the trail. Once you have reached X: 119, Y:224, stop and face west. You will see the rock path continues, carefully follow the path up to a patch of pumpkins where the star will be waiting.
+X: 98, Y: 206    Underneath the Bridge along the Greydew Coast heading toward Wolf Hall Inn/Greendale. You will have to jump and fall to reach it. Easiest to attempt closer/alongside the bridge.
+X: 68, Y: 206    Behind a large boulder. This is in a crevice with a tree inside. You will need to go in to get the star. Call for pickup required.
+X: 37, Y: 201    Follow the coastline West past the Ancient Tree and it's on the side of the cliff behind a rock.
+X: 78, Y: 212    Head to X: 91, Y: 218 and face northwest you should be looking at a space between the two fences. Follow the trail to the coordinates on the left, the star will be behind a giant tree.
+X: 78, Y: 188    Head to the coordinates on the left and you will notice a star in the middle of a circle of runestones. run into it and the star will start to travel in front of you just out of your reach. Stop your horse, dismount and walk up to the star. you will then be able to collect it.
+
+The Forgotten Fields (North)
+
+X: 90, Y: 192    Behind a little house on the hill.
+X: 80, Y: 172    In the Medieval Camp, behind the wooden stands.
+X: 73, Y: 165    In the bushes near the shore.
+X: 57, Y: 176    At the beach, in between the rocks.
+X: 57, Y: 194    In the bushes, between trees.
+X: 102, Y: 162    Under a hanging rock at the beach.
+X: 86, Y: 204    Behind a little house, near the Unfortunate Dews' Farm.
+Fort Pinta
+
+X: 251, Y: 252    On a tiny island at the beach.
+X: 241, Y: 264    At the end of the wall surrounding Fort Pinta.
+X: 239, Y: 271    On one of the towers of the surrounding wall.
+X: 236, Y: 274    On a little balcony facing the harbor, on the surrounding wall.
+X: 234, Y: 258    Between little sheds at the beach.
+X: 233, Y: 274    On the terrace behind the disco, next to one of the sofas.
+
+The Golden Fields
+
+X: 230, Y: 212    Behind haybales in a storage area between the mountains.
+X: 239, Y: 213    In bushes by a tree by the shore of the Silversong River.
+X: 206, Y: 221    On a cliff located behind the G.E.D Billboard.
+X: 243, Y: 189    In bushes by An old boathouse.
+
+Goldenhills Valley
+
+X: 125 , Y: 151    In a bush on a hidden path behind Jasper's barn.
+X: 114, Y: 108    Just outside the witch's cave to the left in brambles/bushes.
+X: 119 Y: 96    West side of the witch's swamp on the shore, you have to jump from the platform onto the ledge of the shore to get it. Jump into the swamp to return to the entrance.
+X: 74, Y: 126    In a large bush along the race track.
+X: 77, Y: 137    In a bush at the base of a cliff.
+X: 74, Y: 151    Go to X: 80, Y: 147 and jump over the fence. Follow the trail. The star is in a bush beside the hut.
+X: 67, Y: 155    Scarecrow Hill in the old church ruins.
+X: 51, Y: 152    Inside Smuggler's Cave behind a pole.
+X: 49 Y: 135    In a bush behind some barrels at Labyrinth Shore.
+X: 36, Y: 74    In a bush along the race track.
+
+Governor's Fall
+
+X: 2, Y: 7    In an alley behind Jollister, behind a trash can in the corner.
+X: 0, Y: 3    You will be standing in front of Star Stable HQ, Click on the keypad and enter the code 1085, a star will appear in the alley to the right.
+See notes    There is a green car driving around with a Star on top of it, You will have to chase it.
+
+The Graydew Mountains
+
+X: 101, Y: 287    The star is behind a boulder, behind the grape fields, near two trees.
+X: 122, Y: 314    A little ways off the path to observatory 12 off the 2nd hair pin turn on the cliff between a boulder and a tree.
+X: 123, Y:252    Head inside the secret Greydew pass.
+X: 122 Y: 250, the star is behind the big tree on the left.
+
+The Harvest Counties
+
+X: 69, Y: 250    The star is spinning on one of the blades of the mill. You may need to jump on the bags beside the mill to reach it. Depending on the day, the Mill may not be working and you will have to speak to Jakob, to get it spinning again.
+X: 24, Y: 270    Next to the flower field, between the back of Dorith's house and a large rock.
+X: 35, Y: 269    Found at the Abandoned Picnic. Head to X: 36, Y: 266 and face northwest, you should be looking at a white hone pole. Ride up to it, stop and face south. Go up the rocky hill in front of you and head to the coordinates on the left.
+X: 44, Y: 272    Underneath the broken dock.
+X: 3, Y: 247    At the Old Runestone. Head to X: 6, Y: 253 and face northwest, you should see a sole runestone, on a small island. Jump to the submerged road and head towards the stone. The star will be floating behind it.
+X: 30, Y: 221    In a wheelbarrow, at the end of the dock.
+X: 149, Y: 257    Hidden between Wolf Hall Inn and Epona, above the gate.
+X: 105, Y: 251    In Greendale forest, bushes along the Challenging Greendale Race route.
+X: 109, Y: 242    Head to the coordinates on the left and you will be in front of the rope ladder to a tree house, You must have the tree house key to enter it. Dismount and use the key on the ladder to be brought up. The star will be right in front of you.
+Shipwreck Shore
+
+X: 48, Y:316    In a bush between some rocks.
+X: 53, Y: 340    On top of a small hill in bushes south of the shore.
+X: 55, Y: 316    In a clearing with bushes and trees close to the shore.
+
+Silverglade Village
+
+X: 187 Y: 191    Click on the lyre at the top of the fountain in the main town square opposite the council man, the star will then appear.
+X: 188 Y: 196    On the tree
+X: 189 Y: 179    Click on the ball, the star will then fall from the pole for you to collect.
+
+Silverglade Vineyard
+
+X: 139, Y: 162    In the Wine cellar basement where the irrigation computer is. Behind the pump.
+X: 138, Y: 170    Inside the Library, move your camera to look at the ceiling.
+X: 132, Y: 161    Behind the barrels.
+X: 153, Y: 160    Next to the little Gardenhouse.
+X: 135, Y: 173    Go to area with Tyra and the building surrounded by hay bales. It is located next to the white tree behind the white and iron fence to the right of the building. (You will need to walk along the ledge behind the fence to reach it.)
+
+South Epona
+
+X: 113 Y: 368    To the right of the secret entrance to Fort Maria
+X: 118 Y: 369    Next to the main entrance of Fort Maria, behind the wall to the left of the door
+X: 91 Y: 299    Behind Li-Jian in Stormgarden, behind a set of hay bales
+X: 95 Y: 294    Next to the shed in the pig sty in Stormgarden
+X: 133 Y: 301    Inside Observatory 12 on the top level
+X: 130 Y: 301    Next to the ramp outside Observatory 12 behind a rock
+X: 153 Y: 390    Behind the rock
+
+South Hoof Peninsula
+
+X: 202, Y: 351    On top of a tall rock. You will have to jump for it.
+X: 159, Y: 379    On a cliff hidden behind some branches.
+X: 275 ,Y: 352    Beneath top layer of rock cliff behind and above the Farm stable.
+X: 282, Y: 371    Underneath the jutting rocks facing SE along the cliff's edge.
+X: 291, Y: 393    Behind the lighthouse. Go up stairs on foot and around.
+X: 285, Y: 393    Underneath the Outhouse, You have to fall to reach it.
+X: 244, Y: 378
+Click on the purple rune on the rock and the star will appear and start flying away. You will have to catch it. Click it while it’s in the air and it will return to the original coordinates, where you can collect it.
+Sunset Isles
+
+X: 118, Y: 380    Next to a rock on the north side of the Isles.
+X: 126, Y: 389    In the bushes on one of the bigger isles.
+X: 97, Y: 392    Next to a rock on the west side of the Isles.
+
+Valedale
+
+X: 256, Y: 86    Druid's paddock, close to a blue flames, behind a tree.
+X: 266, Y: 95    Druid's Paddock - close to rock ledge, walk out to retrieve.
+X: 296, Y: 84    Ledge near entrance of Valley of the Hidden Dinosaur.
+X: 283, Y: 102    Under the bridge, jump in and swim from left side of bridge and under.
+X: 301, Y: 110    By the bench in the open resting area.
+X: 329, Y: 104    Go Across the bridge to the falls go down the sand and run into the Fall to grab star you only have a few seconds act fast.
+X: 300, Y: 141    Ride over rock cliff surrounding the lake and into trees; star at the base of a tree in the brambles.
+X: 308, Y: 114    Behind the tree by the rocks.
+X: 255, Y;155    Hidden in rock under the waterfall.
+X: 320, Y: 127    Under the obstacle behind the hay stacks.
+
+Valley of the Hidden Dinosaur
+
+X: 364, Y: 83    Near the back end of the valley (go through a valley that has a rock bridge over it, off the beaten path towards the northeast). Head up the ledge to the right where you'll see one of the igloo-type formations. It's around the backside of the ice dome.
+X: 371, Y: 89    On top of ice pillar. Walk up the side of the mountain and go out via protruding icicles and jump onto pillar.
+X: 406, Y: 65    On an elevated slope.
+X: 400, Y: 53    Behind one of the large ice chunks next to Stonecutter's Vault.
+X: 377, Y: 68    In the Ice Forest, behind a pile of rocks.
+X: 300, Y: 31    In the bushes. Start at the path at X: 312, Y: 22.
+X: 301, Y: 56    On top of a small incline next to the main path, behind the rocks.
+X: 310, Y: 69    Behind the big ice tower.
+X: 339, Y: 29    On Icepeak Island, follow the ledge to the right of the ice hut and it will be in a little pocket on the side of the peak.
+X: 318, Y: 28    Between three boulders just past a smaller ice island at the base of a cliff topped with dead trees.
+Jarlaheim
+
+X: 46, Y: 249    In the corner of the south tower balcony.
+X: 47, Y: 250    Dark Alley between a shop and empty stall near eastern gate.
+X: 40, Y: 237    Behind the wall between two buildings next to Jan Jarlasson across from transport trailer.
+X: 46, Y: 239    Tucked in a corner between the wall and the ramp near Cornelia.
+X: 49, Y: 253    Inside a barrel by Stablebucks Café.
+
+Jorvik City Mall
+
+X: 2, Y: 2    On the third floor inside a concrete pipe by the stairs.
+
+Jorvik City Harbor (Pier 13)
+
+X: 8, Y: 17    Walk into the Security Guard that is standing on the left side of the main building, he will then drop a key to pick up. Walk then to the coordinates, unlock the gates and follow the stairs up.
+
+Moorland
+
+X: 186, Y: 240    Behind the Moorland barn, in between the barn and the fence.
+X: 179, Y: 251    Behind a fence section, along the Moorland Championship route.
+X: 170, Y: 238    Near the old pole bending grounds beside a cliff.
+X: 179, Y: 229    In the mine, when you go in head to the left and go through the hallway.
+X: 189, Y: 228    Just behind Conrad Maarsden's house.
+X: 204, Y: 223    In the GED worksite, behind a bush near one of the wooden sheds.
+X: 212, Y: 228    Behind Old Jasper's house, past the fence to Fort Pinta. It's hiding under a tree.
+X: 218, Y: 244    Near Loop's Fishing Gear, in the water.
+X: 216, Y: 249    Up near the lighthouse, hiding in a bush.
+
+New Hillcrest
+
+X: 143, Y: 335    Behind the beige house on its roof. You will need to jump onto the deck to reach it.
+X: 154,Y: 341    Behind the Winterwell Mansion.
+X: 137, Y: 332    Head to X: 145, Y:336 you will be on a hill behind the Cul-de-sac. Face Northwest and follow the thin strip of land next to the wall, walk the road until you reach a small brown cliff, the Star will be in the middle of it.
+X: 150, Y: 391    Head to X: 143, Y: 356 and you will see to flag markers laying on the sand, click on them and a star will appear, prompting a special race complete the race to win the star.
+
+Nilmer's Highland
+
+X: 150, Y: 228    Go straight down path into ravine to the left of Ydris's Circus. In brambles by tree.
+X: 144, Y: 226    On top of rock near bridge.
+X: 154, Y: 237    Between stone fence and rock face beside tree in brambles.
+X: 164, Y: 244    Down along riverside in Smugglers' Hideout. Approach from Birch Hill/Old Silverglade Road along Southsilver Waters. (Walk around behind fencing to obtain.
