@@ -14,7 +14,7 @@
 .reputation-summary strong{color:var(--rose-light);font:15px/1.2 var(--serif);text-align:right}
 .reputation-copy{padding:34px 38px 42px}
 .reputation-heading{display:flex;gap:17px;align-items:flex-start;padding-bottom:24px;border-bottom:1px solid var(--line)}
-.reputation-heading>span{min-width:42px;height:42px;display:grid;place-items:center;border:1px solid var(--line2);color:var(--rose-light);font:18px var(--serif)}
+.reputation-heading>span{width:42px;min-width:42px;height:42px;display:flex;align-items:center;justify-content:center;border:1px solid var(--line2);color:var(--rose-light);font:18px/1 var(--serif)}
 .reputation-heading .eyebrow{margin:0 0 3px}
 .reputation-heading h2{margin:0;font:clamp(29px,3.4vw,43px)/1.05 var(--serif)}
 .reputation-lead{max-width:760px;margin:23px 0 29px;color:#ddcdcf;font:18px/1.55 var(--serif)}
