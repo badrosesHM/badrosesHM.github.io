@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="map.css">
 <link rel="stylesheet" href="schedule-menu.css">
 <link rel="stylesheet" href="reputation.css">
+<link rel="stylesheet" href="quests.css">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -22,7 +23,14 @@
     <a href="#waitlist" data-route="waitlist">Waitlist</a>
     <a href="#socials" data-route="socials">Socials</a>
     <a href="#map" data-route="map">Map</a>
-    <a href="#reputation" data-route="reputation">Reputation</a>
+    <!-- EDIT TEXT: Quests and reputation dropdown labels and destinations. -->
+    <div class="schedule-dropdown">
+      <button class="schedule-menu-button" id="quest-rep-menu-button" type="button" aria-expanded="false" aria-controls="quest-rep-menu">Quests/Rep</button>
+      <div class="schedule-menu" id="quest-rep-menu" hidden>
+        <a href="#quests" data-route="quests">Quests</a>
+        <a href="#reputation" data-route="reputation">Reputations</a>
+      </div>
+    </div>
     <!-- EDIT TEXT: Schedule dropdown labels and destinations. -->
     <div class="schedule-dropdown">
       <button class="schedule-menu-button" id="schedule-menu-button" type="button" aria-expanded="false" aria-controls="schedule-menu">Schedules</button>
@@ -49,7 +57,7 @@
   </div>
   <div class="wrap home-intro">
     <div class="section-heading"><p class="eyebrow">Welcome, Rose</p><h2>A little website<br><em>for the people who are interested.</em></h2></div>
-    <p class="intro-text">Bad Roses is a Horse Museum Community, with an in-game club and an open community Discord. Browse the item and beauty database, follow the historical reputation guide, or check the weekly Spirit and championship schedules in UTC.</p>
+    <p class="intro-text">Bad Roses is a Horse Museum Community, with an in-game club and an open community Discord. Browse the item and beauty database, follow the quest and reputation guides, or check the weekly Spirit and championship schedules in UTC.</p>
   </div>
   <div class="wrap home-grid">
     <a class="feature-card feature-database" href="#database"><span class="card-kicker">The database <span>01</span></span><h3>Browse through the database</h3><p>A browsable guide to clothing, gear, horse decorations, horses, pets, makeup and hairstyles.</p><div class="item-preview" id="home-items" aria-label="A few entries from the database"></div><span class="text-link">Open the database <b>→</b></span></a>
@@ -80,6 +88,70 @@
 <section class="view" id="socials" data-view="socials">
   <div class="page-banner socials-banner"><div class="wrap"><p class="eyebrow">Find Bad Roses online</p><h1>Follow the <em>petals.</em></h1><p>Join the conversation, meet the club, and see what’s happening around Jorvik.</p></div></div>
   <div class="wrap socials-wrap"><article class="social-card discord-card"><div class="social-icon"><svg viewBox="0 0 24 24" aria-label="Discord logo" role="img"><path fill="currentColor" d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.419-2.1568 2.419Z"/></svg></div><p class="eyebrow">Come say hello</p><h2>Community<br><em>Discord.</em></h2><p>Our open community server is where the waitlist lives and where everyone can meet the Roses.</p><a class="button button-discord" data-link="communityDiscord" href="#">Join the community <span>↗</span></a><span class="social-caption">OPEN TO EVERYONE</span></article><article class="social-card tiktok-card"><div class="social-icon"><svg viewBox="0 0 24 24" aria-label="TikTok logo" role="img"><path fill="currentColor" d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></div><p class="eyebrow">Life around Jorvik</p><h2>Bad Roses<br><em>on TikTok.</em></h2><p>Find our short videos and little snapshots from club life.</p><a class="button button-tiktok" data-link="tiktok" href="#">Follow on TikTok <span>↗</span></a><span class="social-caption">CLIPS FROM JORVIK</span></article></div><p class="wrap social-footnote">Official social platforms are run by their respective companies. External links open their websites or apps.</p>
+</section>
+<!-- EDIT TEXT: Quest guide introduction and Silverglade Village and Steve's Farm unlock steps. -->
+<section class="view" id="quests" data-view="quests">
+  <div class="page-banner quests-banner">
+    <div class="wrap">
+      <p class="eyebrow">Quest library</p>
+      <h1>Guides for quests<br><em>across Jorvik.</em></h1>
+      <p>Browse step-by-step unlock guides, requirements, routes, and troubleshooting help for quests from different regions and storylines.</p>
+    </div>
+  </div>
+  <div class="wrap quests-page">
+    <!-- EDIT TEXT: Add links to new quest entries in this catalog. -->
+    <div class="quest-library-heading">
+      <div><p class="eyebrow">Available quest guides</p><h2>Choose a questline</h2></div>
+    </div>
+    <nav class="quest-catalog" aria-label="Quest guide list">
+      <button type="button" data-quest-target="silverglade-steves-quest"><span>Quest guide 01 · Early game</span><strong>Silverglade Village and Steve’s Farm</strong><small>Level 4–5 · Starts in Moorland</small></button>
+    </nav>
+
+    <!-- EDIT TEXT: Quest guide 01. Duplicate this quest-entry block when adding another guide. -->
+    <article class="quest-entry" id="silverglade-steves-quest">
+      <header class="quest-entry-header">
+        <div><p class="eyebrow">Quest guide 01 · Early game</p><h2>Unlocking Silverglade Village and Steve’s Farm</h2></div>
+        <div class="quest-entry-meta"><span>Level 4–5</span><span>Moorland</span><span>Silverglade</span></div>
+      </header>
+      <div class="quest-guide">
+      <div class="quest-gallery">
+        <!-- EDIT IMAGE: Silverglade Village screenshot. -->
+        <figure><img src="assets/silverglade-village-quest.png" alt="An overhead view of Silverglade Village" loading="lazy" decoding="async"><figcaption>Silverglade Village</figcaption></figure>
+        <!-- EDIT IMAGE: Steve's Farm screenshot. -->
+        <figure><img src="assets/steves-farm-quest.png" alt="Steve's Farm with its stable, paddock, and hay bales" loading="lazy" decoding="async"><figcaption>Steve’s Farm</figcaption></figure>
+      </div>
+
+      <div class="quest-copy">
+        <section class="quest-requirements">
+          <p class="eyebrow">Before you begin</p>
+          <h2>Unlock requirements</h2>
+          <div class="quest-requirement-grid">
+            <div><h3>Player level</h3><p>Reach Level 4 or 5.</p></div>
+            <div><h3>Prerequisite quests</h3><p>Complete the main introductory quests in Moorland with Tan and Loretta of the Bobcat Girls, unlock Fort Pinta, and finish the early tasks involving Ydris and Maya.</p></div>
+          </div>
+        </section>
+
+        <!-- EDIT TEXT: Silverglade and Steve's Farm step-by-step questline. -->
+        <section class="quest-steps-section">
+          <p class="eyebrow">Step-by-step unlock questline</p>
+          <h2>From Moorland to Silverglade</h2>
+          <ol class="quest-steps">
+            <li><div><span>01</span><h3>The Stolen Deed</h3></div><p>Progress through the Moorland storyline until Thomas Moorland’s stables are threatened. A masked rider, Sabine, appears and steals the original deed to Moorland Stables.</p></li>
+            <li><div><span>02</span><h3>Catch the Masked Rider</h3></div><p>Accept the quest from Thomas or Maya and follow the quest markers to chase the thief. Catch the rider and recover the stolen documents.</p></li>
+            <li><div><span>03</span><h3>Ride to Silverglade Village</h3></div><p>After recovering the deed, take it directly to the Councilman in Silverglade Village so it can be kept legally safe.</p></li>
+            <li><div><span>04</span><h3>Follow the Route</h3></div><p>Ride north past the Bobcat Girls’ racing track in Moorland and follow the main dirt path. Silverglade Castle will appear on the horizon; the village sits below and slightly north of it.</p></li>
+            <li><div><span>05</span><h3>Unlock Steve’s Farm</h3></div><p>Steve’s Farm sits just outside the Silverglade Village walls. Speak with the Councilman and complete the initial Silverglade introductions to unlock Steve as a quest giver and make his farm available as a Home Stable.</p></li>
+          </ol>
+        </section>
+
+        <aside class="quest-help">
+          <h2>If the quest does not appear</h2>
+          <p>Press <kbd>L</kbd> to open the Quest Log. Check for unfinished tasks under <strong>Main Quests</strong> in Moorland or Fort Pinta.</p>
+        </aside>
+      </div>
+      </div>
+    </article>
+  </div>
 </section>
 <!-- EDIT TEXT: Reputation guide introduction, Kallters progression, and Epona requirements. -->
 <section class="view" id="reputation" data-view="reputation">
@@ -290,5 +362,6 @@
 <script src="beauty-category.js" defer></script>
 <script src="map.js" defer></script>
 <script src="schedule-menu.js" defer></script>
+<script src="quests.js" defer></script>
 </body>
 </html>

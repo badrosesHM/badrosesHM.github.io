@@ -1,51 +1,73 @@
-// SCHEDULE MENU: Change the dropdown behavior here.
+// NAVIGATION DROPDOWNS: Change the shared Quests/Rep and Schedules dropdown behavior here.
 (()=>{
-  const button=document.getElementById('schedule-menu-button');
-  const menu=document.getElementById('schedule-menu');
-  if(!button||!menu)return;
+  const dropdowns=[...document.querySelectorAll('.schedule-dropdown')];
+  if(!dropdowns.length)return;
 
-  function closeMenu(){
+  function closeDropdown(dropdown,restoreFocus=false){
+    const button=dropdown.querySelector('.schedule-menu-button');
+    const menu=dropdown.querySelector('.schedule-menu');
     button.setAttribute('aria-expanded','false');
     menu.hidden=true;
+    if(restoreFocus)button.focus();
   }
 
-  function positionMenu(){
+  function closeAll(except=null){
+    dropdowns.forEach(dropdown=>{
+      if(dropdown!==except)closeDropdown(dropdown);
+    });
+  }
+
+  function positionMenu(dropdown){
+    const button=dropdown.querySelector('.schedule-menu-button');
+    const menu=dropdown.querySelector('.schedule-menu');
     const rect=button.getBoundingClientRect();
     const width=menu.offsetWidth||205;
     menu.style.top=`${Math.round(rect.bottom+6)}px`;
     menu.style.left=`${Math.round(Math.max(12,Math.min(rect.left,window.innerWidth-width-12)))}px`;
   }
 
-  function openMenu(){
+  function openDropdown(dropdown){
+    closeAll(dropdown);
+    const button=dropdown.querySelector('.schedule-menu-button');
+    const menu=dropdown.querySelector('.schedule-menu');
     menu.hidden=false;
     button.setAttribute('aria-expanded','true');
-    positionMenu();
+    positionMenu(dropdown);
   }
 
-  function updateActiveState(){
+  function updateActiveStates(){
     const route=location.hash.slice(1);
-    if(route==='spirit'||route==='championship')button.setAttribute('aria-current','page');
-    else button.removeAttribute('aria-current');
+    dropdowns.forEach(dropdown=>{
+      const button=dropdown.querySelector('.schedule-menu-button');
+      const active=[...dropdown.querySelectorAll('[data-route]')].some(link=>link.dataset.route===route);
+      if(active)button.setAttribute('aria-current','page');
+      else button.removeAttribute('aria-current');
+    });
   }
 
-  button.addEventListener('click',()=>{
-    if(menu.hidden)openMenu();
-    else closeMenu();
+  dropdowns.forEach(dropdown=>{
+    const button=dropdown.querySelector('.schedule-menu-button');
+    const menu=dropdown.querySelector('.schedule-menu');
+    button.addEventListener('click',()=>{
+      if(menu.hidden)openDropdown(dropdown);
+      else closeDropdown(dropdown);
+    });
+    menu.addEventListener('click',event=>{
+      if(event.target.closest('a'))closeDropdown(dropdown);
+    });
   });
-  menu.addEventListener('click',event=>{
-    if(event.target.closest('a'))closeMenu();
-  });
+
   document.addEventListener('click',event=>{
-    if(!event.target.closest('.schedule-dropdown'))closeMenu();
+    if(!event.target.closest('.schedule-dropdown'))closeAll();
   });
   document.addEventListener('keydown',event=>{
     if(event.key==='Escape'){
-      closeMenu();
-      button.focus();
+      const openDropdownElement=dropdowns.find(dropdown=>!dropdown.querySelector('.schedule-menu').hidden);
+      if(openDropdownElement)closeDropdown(openDropdownElement,true);
     }
   });
-  window.addEventListener('resize',closeMenu);
-  window.addEventListener('scroll',closeMenu,{passive:true});
-  window.addEventListener('hashchange',updateActiveState);
-  updateActiveState();
+  window.addEventListener('resize',()=>closeAll());
+  window.addEventListener('scroll',()=>closeAll(),{passive:true});
+  window.addEventListener('hashchange',updateActiveStates);
+  updateActiveStates();
 })();

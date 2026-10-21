@@ -1,0 +1,46 @@
+/* QUESTS PAGE: Change the quest library, individual guide layout, and appearance here. */
+.quests-banner{background:radial-gradient(ellipse at 83% 30%,rgba(143,38,55,.24),transparent 34%),linear-gradient(120deg,#211116,#130b0d)}
+.quests-page{padding:42px 0 92px}
+.quest-library-heading{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:18px}
+.quest-library-heading .eyebrow{margin-bottom:5px}
+.quest-library-heading h2{margin:0;font:clamp(29px,3.4vw,42px)/1.08 var(--serif)}
+.quest-library-heading>p{max-width:410px;margin:0;color:var(--muted);font-size:11px}
+.quest-catalog{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:32px}
+.quest-catalog button{display:grid;gap:7px;min-height:145px;padding:19px;border:1px solid var(--line);background:#191013;color:inherit;text-align:left;cursor:pointer;transition:border-color .2s,background .2s}
+.quest-catalog button:hover,.quest-catalog button:focus-visible{border-color:var(--rose);background:#241519;outline:none}
+.quest-catalog span{color:var(--rose-light);font-size:9px;letter-spacing:.1em;text-transform:uppercase}
+.quest-catalog strong{color:var(--cream);font:21px/1.25 var(--serif)}
+.quest-catalog small{margin-top:auto;color:var(--muted2);font-size:9px}
+.quest-entry{scroll-margin-top:20px;border:1px solid var(--line);background:#191013}
+.quest-entry-header{display:flex;align-items:end;justify-content:space-between;gap:25px;padding:25px 28px;border-bottom:1px solid var(--line);background:#211417}
+.quest-entry-header .eyebrow{margin-bottom:5px}
+.quest-entry-header h2{margin:0;font:clamp(27px,3vw,39px)/1.08 var(--serif)}
+.quest-entry-meta{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:7px}
+.quest-entry-meta span{padding:5px 9px;border:1px solid var(--line2);color:var(--rose-light);font-size:9px;letter-spacing:.05em}
+.quest-guide{display:grid;grid-template-columns:minmax(280px,.74fr) minmax(0,1.45fr);background:#191013}
+.quest-gallery{padding:16px;border-right:1px solid var(--line);background:#140d0f}
+.quest-gallery figure{margin:0 0 15px;border:1px solid var(--line);background:#0e090a}
+.quest-gallery figure:last-child{margin-bottom:0}
+.quest-gallery img{display:block;width:100%;aspect-ratio:1.55/1;object-fit:contain}
+.quest-gallery figcaption{padding:10px 12px;border-top:1px solid var(--line);color:var(--muted2);font-size:9px;letter-spacing:.06em}
+.quest-copy{padding:34px 38px 42px}
+.quest-copy h2{margin:0;color:var(--cream);font:clamp(28px,3.2vw,40px)/1.08 var(--serif)}
+.quest-requirements>.eyebrow,.quest-steps-section>.eyebrow{margin-bottom:5px}
+.quest-requirement-grid{display:grid;grid-template-columns:.55fr 1.45fr;gap:11px;margin-top:21px}
+.quest-requirement-grid>div{padding:17px;border:1px solid var(--line);background:#211417}
+.quest-requirement-grid h3{margin:0 0 6px;color:var(--rose-light);font:18px/1.2 var(--serif)}
+.quest-requirement-grid p{margin:0;color:var(--muted);font-size:10px;line-height:1.6}
+.quest-steps-section{margin-top:37px;padding-top:30px;border-top:1px solid var(--line)}
+.quest-steps{list-style:none;margin:23px 0 0;padding:0;display:grid}
+.quest-steps li{display:grid;grid-template-columns:minmax(180px,.62fr) minmax(0,1fr);gap:20px;padding:17px 0;border-top:1px solid #352328}
+.quest-steps li>div{display:grid;grid-template-columns:31px 1fr;gap:9px;align-items:start}
+.quest-steps li>div span{width:29px;height:29px;display:flex;align-items:center;justify-content:center;border:1px solid var(--line2);color:var(--rose-light);font:12px/1 var(--serif)}
+.quest-steps h3{margin:3px 0 0;color:var(--cream);font:17px/1.25 var(--serif)}
+.quest-steps li>p{margin:0;color:var(--muted);font-size:10px;line-height:1.65}
+.quest-help{margin-top:31px;padding:21px 23px;border:1px solid #61333d;background:#211317}
+.quest-help h2{font-size:22px}
+.quest-help p{margin:8px 0 0;color:var(--muted);font-size:11px;line-height:1.65}
+.quest-help strong{color:var(--cream)}
+.quest-help kbd{display:inline-block;min-width:25px;padding:1px 7px;border:1px solid var(--line2);background:#120b0d;color:var(--rose-light);font:12px var(--sans);text-align:center}
+@media(max-width:980px){.quest-guide{grid-template-columns:1fr}.quest-gallery{display:grid;grid-template-columns:1fr 1fr;gap:14px;border-right:0;border-bottom:1px solid var(--line)}.quest-gallery figure{margin:0}}
+@media(max-width:700px){.quests-page{padding-top:25px}.quest-library-heading,.quest-entry-header{display:block}.quest-library-heading>p{margin-top:12px}.quest-catalog{grid-template-columns:1fr}.quest-entry-meta{justify-content:flex-start;margin-top:16px}.quest-gallery{grid-template-columns:1fr}.quest-copy{padding:25px 19px 31px}.quest-requirement-grid{grid-template-columns:1fr}.quest-steps li{grid-template-columns:1fr;gap:8px}.quest-help{padding:18px}}
